@@ -292,6 +292,116 @@ h6 {
     transform: scale(1.1);
 }
 
+.thumbnail-container {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail-container:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.thumbnail-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 60, 109, 0.8);
+    /* --primary-blue with opacity */
+    color: var(--white);
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.thumbnail-container:hover .thumbnail-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal-content {
+    border-radius: 10px;
+    border: 2px solid var(--gold-accent);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--gold-accent);
+}
+
+.modal-body {
+    padding: 1rem;
+}
+
+.modal-body img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.modal-body .img-caption {
+    color: var(--dark-brown);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-comparison {
+    background-color: var(--primary-blue);
+    /* #1A3C6D */
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-comparison:hover {
+    transform: scale(1.1);
+    background-color: var(--white);
+    /* Lighter shade of #1A3C6D for hover */
+    border-color: var(--primary-blue);
+}
+
+@media (max-width: 991px) {
+    .modal-body .row {
+        flex-direction: column;
+    }
+
+    .modal-body .col-md-6 {
+        width: 100%;
+    }
+
+    .modal-body img {
+        max-height: none;
+        margin-bottom: 0.5rem;
+    }
+
+    .modal-body .img-caption {
+        margin-bottom: 1.5rem;
+    }
+
+    .col-md-12.text-md-center,
+    .col-12.text-md-center {
+        text-align: center !important;
+        /* Center button on tablet/mobile */
+    }
+
+    .thumbnail-container img {
+        width: 100%;
+        /* Ensure full-width image on mobile */
+    }
+}
+
 @media (max-width: 768px) {
     .carousel-caption h1 {
         font-size: 1.5rem;
