@@ -17,6 +17,28 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
 </head>
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function adjustImageHeight() {
+            if (window.innerWidth >= 768) {
+                const benefitsColumn = document.querySelector('.col-lg-6.mb-3');
+                const image = document.querySelector('.benefits-image');
+                if (benefitsColumn && image) {
+                    const benefitsHeight = benefitsColumn.offsetHeight;
+                    image.style.height = `${benefitsHeight}px`;
+                }
+            } else {
+                const image = document.querySelector('.benefits-image');
+                if (image) {
+                    image.style.height = 'auto';
+                }
+            }
+        }
+
+        adjustImageHeight();
+        window.addEventListener('resize', adjustImageHeight);
+    });
+</script> -->
 
 <body>
     <!-- Header -->
@@ -186,69 +208,106 @@
                 </div>
             </div>
         </div>
-    </section> <!-- Comparison Modal -->
-    <div class="modal fade" id="comparisonModal" tabindex="-1" aria-labelledby="comparisonModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="comparisonModalLabel" style="color: var(--primary-blue);">So sánh Đơn đề
-                        nghị & Đơn phát hiện trùng lặp</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row g-3">
-                        <div class="col-md-6 col-12">
-                            <div class="text-center">
-                                <img src="assets/img/AI-don-de-nghi.png" alt="Đơn đề nghị">
-                                <p class="img-caption">Đơn đề nghị</p>
+        <!-- Comparison Modal -->
+        <div class="modal fade" id="comparisonModal" tabindex="-1" aria-labelledby="comparisonModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="comparisonModalLabel" style="color: var(--primary-blue);">So sánh
+                            Đơn đề
+                            nghị & Đơn phát hiện trùng lặp</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-3">
+                            <div class="col-md-6 col-12">
+                                <div class="text-center">
+                                    <img src="assets/img/AI-don-de-nghi.png" alt="Đơn đề nghị">
+                                    <p class="img-caption">Đơn đề nghị</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="text-center">
-                                <img src="assets/img/AI-don-phat-hien-trung-lap.png" alt="Đơn phát hiện trùng lặp">
-                                <p class="img-caption">Đơn phát hiện trùng lắp</p>
+                            <div class="col-md-6 col-12">
+                                <div class="text-center">
+                                    <img src="assets/img/AI-don-phat-hien-trung-lap.png" alt="Đơn phát hiện trùng lặp">
+                                    <p class="img-caption">Đơn phát hiện trùng lắp</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Benefits Section -->
-    <section id="benefits" class="py-5">
+    <section id="benefits" class="py-5" style="background-color: var(--light-orange);">
         <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-up">Lợi Ích Vượt Trội Cho Tổ Chức/Doanh Nghiệp Của Bạn</h2>
+            <h2 class="text-center mb-5" style="color: var(--primary-blue);" data-aos="fade-up">Lợi Ích Vượt Trội Cho Tổ
+                Chức/Doanh Nghiệp Của Bạn</h2>
             <div class="row">
-                <div class="col-md-4 mb-4" data-aos="fade-right">
-                    <div class="feature-card p-3 text-center">
-                        <i class="fas fa-check-circle fa-2x mb-3" style="color: var(--light-orange);"></i>
-                        <h5>Dễ dàng đăng ký/theo dõi</h5>
+                <div class="col-lg-6 col-12 mb-4">
+                    <div class="benefit-card d-flex align-items-stretch mb-3" data-aos="fade-right"
+                        data-aos-delay="100">
+                        <div class="benefit-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div>
+                                <h5>Dễ dàng đăng ký/theo dõi</h5>
+                                <p>Đăng ký và theo dõi tiến trình sáng kiến nhanh chóng, tiện lợi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-right" data-aos-delay="200">
+                        <div class="benefit-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div>
+                                <h5>Tối ưu hóa quy trình</h5>
+                                <p>Tự động hóa và cải tiến quy trình xử lý sáng kiến</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-right" data-aos-delay="300">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div>
+                                <h5>Tiết kiệm thời gian và chi phí</h5>
+                                <p>Giảm thiểu thời gian và chi phí vận hành quản lý sáng kiến</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-right" data-aos-delay="400">
+                        <div class="benefit-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div>
+                                <h5>Phát hiện trùng lắp sáng kiến</h5>
+                                <p>Công nghệ AI giúp phát hiện sáng kiến trùng lặp chính xác</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefit-card" data-aos="fade-right" data-aos-delay="500">
+                        <div class="benefit-icon">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div>
+                                <h5>Hệ thống quy trình động</h5>
+                                <p>Quy trình linh hoạt, dễ dàng điều chỉnh theo nhu cầu</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="feature-card p-3 text-center">
-                        <i class="fas fa-cogs fa-2x mb-3" style="color: var(--light-orange);"></i>
-                        <h5>Tối ưu hóa quy trình</h5>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="fade-left">
-                    <div class="feature-card p-3 text-center">
-                        <i class="fas fa-clock fa-2x mb-3" style="color: var(--light-orange);"></i>
-                        <h5>Tiết kiệm thời gian và chi phí</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4" data-aos="fade-right">
-                    <div class="feature-card p-3 text-center">
-                        <i class="fas fa-search fa-2x mb-3" style="color: var(--light-orange);"></i>
-                        <h5>Phát hiện trùng lắp sáng kiến</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4" data-aos="fade-left">
-                    <div class="feature-card p-3 text-center">
-                        <i class="fas fa-sync fa-2x mb-3" style="color: var(--light-orange);"></i>
-                        <h5>Hệ thống quy trình động</h5>
+                <div class="col-lg-6 col-12 mb-4" data-aos="fade-left">
+                    <div class="benefits-img-container">
+                        <img src="assets/img/benefits_section_img-1.png" class="benefits-image"
+                            alt="Benefits Illustration">
                     </div>
                 </div>
             </div>
