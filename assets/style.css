@@ -355,6 +355,103 @@ h6 {
 .footer {
     background-color: var(--primary-blue);
     color: var(--white);
+    position: relative;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--light-orange);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.footer-title {
+    color: var(--light-orange);
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--light-orange);
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.footer-contact-item i {
+    color: var(--light-orange);
+    margin-top: 0.25rem;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-list li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links-list a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.footer-links-list a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--light-orange);
+    transition: width 0.3s ease;
+}
+
+.footer-links-list a:hover {
+    color: var(--light-orange);
+}
+
+.footer-links-list a:hover::after {
+    width: 100%;
 }
 
 .scroll-top {
@@ -615,6 +712,26 @@ h6 {
         width: 100%;
         /* Ensure full-width image on mobile */
     }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* .footer-social {
+        justify-content: center;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-contact-item {
+        justify-content: center;
+    } */
 }@media (max-width: 2000px) {
     .carousel-caption {
         max-width: 40%;
