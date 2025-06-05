@@ -29,3 +29,15 @@ window.addEventListener('scroll', () => {
 
 // Initial call to set active state
 window.dispatchEvent(new Event('scroll'));
+
+// Scroll to Top Button
+const scrollTopBtn = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+    // Hiển thị nút khi cuộn xuống 100px
+    if (window.scrollY > 100) {
+        scrollTopBtn.classList.add('show');
+    } else {
+        scrollTopBtn.classList.remove('show');
+    }
+});
