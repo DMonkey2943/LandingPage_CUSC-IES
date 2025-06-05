@@ -8,6 +8,11 @@
     --gray-light: #D3D3D3;
 }
 
+html {
+    scroll-padding-top: 76px; /* Đảm bảo scroll dừng cách navbar một khoảng */
+    scroll-behavior: smooth; /* Làm mượt hiệu ứng scroll */
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--light-beige);
@@ -29,9 +34,9 @@ h6 {
 .btn-primary {
     background-color: var(--light-orange);
     border-color: var(--gold-accent);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 800;
     transition: transform 0.2s;
 }
 
@@ -52,6 +57,10 @@ h6 {
     font-weight: 600;
     transition: all 0.3s;
     position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--gold-accent);
 }
 
 .navbar-nav .nav-link::after {
@@ -116,6 +125,8 @@ h6 {
 #about {
     background-color: var(--primary-blue);
     color: var(--white);
+    /* padding-top: 100px;
+    margin-top: -100px; */
 }
 
 #about h2,
@@ -170,6 +181,7 @@ h6 {
 
 .timeline .step:nth-child(odd) {
     left: 0;
+    padding: 10px 20px;
 }
 
 .timeline .step:nth-child(even) {
@@ -377,6 +389,7 @@ h6 {
     justify-content: center;
     width: 40px;
     height: 40px;
+    text-decoration: none;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: var(--white);
@@ -461,7 +474,7 @@ h6 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--light-orange);
+    background-color: var(--gold-accent);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -469,7 +482,14 @@ h6 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .scroll-top:hover {
@@ -773,6 +793,11 @@ h6 {
         .timeline .step::before {
             left: 20px;
         }
+
+        .timeline .step:nth-child(odd) {
+            padding-left: 70px;
+            padding-right: 25px;
+        }
     
         .timeline .step:nth-child(even) {
             left: 0;
@@ -812,7 +837,7 @@ h6 {
 
 /* Trust Section */
 .bg-light {
-    background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 50%, var(--white) 100%);
+    background: var(--gray-light);
     position: relative;
     overflow: hidden;
 }
