@@ -1621,8 +1621,65 @@ h6 {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    position: relative;
+    position: relative; 
     z-index: 1;
+}
+
+/* Tablet styles */
+@media (min-width: 577px) and (max-width: 991px) {
+    .business-card .contact-name {
+        font-size: 1.2rem;
+    }
+    
+    .business-card .contact-title {
+        font-size: 0.9rem;
+    }
+    
+    .business-card .contact-details {
+        margin-top: 1rem;
+    }
+    
+    .business-card .contact-item {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 576px) {
+    .business-card .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .business-card .contact-info {
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .business-card .contact-details {
+        border-left: none;
+        border-top: 3px solid var(--light-orange);
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+
+    .business-card .contact-item {
+        justify-content: center;
+    }
+
+    .business-card .qr-code-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .business-card .qr-code-container img {
+        margin: 0 auto;
+    }
 }
 
 .business-card .qr-code-container img {
