@@ -384,22 +384,38 @@ h6 {
 }
 
 .social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+    display: block;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    color: var(--white);
     transition: all 0.3s ease;
 }
 
+.social-link .social-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .social-link:hover {
-    background: var(--light-orange);
-    color: var(--white);
     transform: translateY(-3px);
+}
+
+.social-link:hover .social-icon {
+    filter: brightness(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1200px) {
+    .footer-social {
+        align-items: flex-start;
+    }
+    .social-link {
+        margin-bottom: 1rem;
+    }
 }
 
 .footer-title {
