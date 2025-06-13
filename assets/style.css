@@ -20,6 +20,10 @@ body {
     padding-top: 80px;
 }
 
+p {
+    text-align: justify;
+}
+
 h1,
 h2,
 h3,
@@ -103,7 +107,7 @@ h6 {
 }
 
 .carousel-caption h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: var(--primary-blue);
     margin-bottom: 1rem;
 }
@@ -144,6 +148,10 @@ h6 {
     flex-direction: column;
     justify-content: center;
     padding: 2rem !important;
+}
+
+.feature-card p {
+    text-align: center;
 }
 
 #benefits .feature-card {
@@ -769,11 +777,45 @@ h6 {
     }
 }
 
+@media (max-width: 1870px) {
+    .carousel-caption {
+        padding: 0.5rem;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1635px) {
+    .carousel-caption {
+        padding: 1rem;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.35rem;
+    }
+}
+
+@media (max-width: 1345px) {
+    .carousel-caption {
+        padding: 0.5rem;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.1rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .carousel-caption {
-        max-width: 420px;
+        max-width: 450px;
         right: 1%;
-        padding: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2rem;
     }
 }
 
@@ -783,16 +825,16 @@ h6 {
         left: 5%;
         right: 5%;
         padding: 1rem;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.8);
     }
 
     .carousel-caption h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         /* margin-bottom: 0.2rem; */
     }
 
     .carousel-caption p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 1rem;
     }
 
@@ -848,6 +890,53 @@ h6 {
         width: 100%;
         padding: 0.75rem;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 618px) {
+    .carousel-caption {
+        max-width: 100%;
+        left: 2%;
+        right: 2%;
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-caption {
+        left: 0.5%;
+        right: 0.5%;
+        padding: 0.5rem;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .carousel-caption span {
+        display: block;
+    }
+
+    .carousel-caption p {
+        display: none;
+    }
+
+    .carousel-caption a {
+        display: block;
+        font-size: 0.8rem;
     }
 }
 
@@ -957,8 +1046,9 @@ h6 {
 
 /* Thiết kế text ấn tượng cho card 1 */
 .gradient-text {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 900;
+    text-align: center;
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--gold-accent) 50%, var(--light-orange) 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -991,12 +1081,13 @@ h6 {
     content: '';
     position: absolute;
     bottom: -15px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 80px;
     height: 4px;
     background: linear-gradient(90deg, var(--gold-accent), var(--light-orange), var(--gold-accent));
     border-radius: 2px;
-    animation: pulse 2s infinite;
+    /* animation: pulse 2s infinite; */
 }
 
 @keyframes pulse {
@@ -1424,7 +1515,7 @@ h6 {
 .footer-contact .contact-item {
     display: flex;
     align-items: center;
-    font-size: 1.0rem;
+    /* font-size: 1.0rem; */
     color: #5a6777;
 }
 
@@ -1619,7 +1710,7 @@ h6 {
     justify-content: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    margin-right: 12px;
+    margin-right: 8px;
     font-size: 1rem;
     color: var(--gold-accent);
     transition: all 0.3s ease;
@@ -1639,6 +1730,18 @@ h6 {
     transition: all 0.3s ease;
     position: relative; 
     z-index: 1;
+}
+
+.footer .business-card .contact-name {
+    font-size: 1.1rem;
+}
+
+.footer .business-card .contact-title {
+    font-size: 0.9rem;
+}
+
+.footer .business-card .contact-details{
+    font-size: 0.9rem;
 }
 
 /* Tablet styles */
@@ -1729,3 +1832,51 @@ h6 {
     font-size: 0.9rem;
     margin: 0;
 }
+
+/* Footer Counter Styles */
+.footer-counter {
+    color: var(--white);
+}
+
+.footer-counter .counter-stats {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1rem;
+}
+
+.counter-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.counter-item:last-child {
+    margin-bottom: 0;
+}
+
+.counter-item i {
+    width: 30px;
+    color: var(--light-orange);
+    margin-right: 4px;
+}
+
+.counter-number {
+    color: var(--gold-accent);
+    font-weight: 600;
+    margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+    .footer .business-card .qr-code-container {
+        padding: 4px;
+    }
+
+    .footer .business-card .qr-code-container img {
+        width: 80px;
+        height: auto;
+    }
+} 

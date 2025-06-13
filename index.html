@@ -78,7 +78,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="assets/img/CUSC_Logo.png" alt="CUSC Logo"
-                    style="height: 50px;"></a>
+                    style="height: 50px; width: 100px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -109,7 +109,7 @@
                     <img src="assets/img/banner-cusc-ies.png" class="d-block w-100"
                         alt="Giao diện phần mềm quản lý sáng kiến CUSC-IES">
                     <div class="carousel-caption">
-                        <h1 data-aos="fade-up">Phần mềm Quản Lý Sáng Kiến CUSC-IES</h1>
+                        <h1 data-aos="fade-up">Phần mềm Quản Lý Sáng Kiến <span>CUSC-IES</h1>
                         <p data-aos="fade-up" data-aos-delay="100">Tối ưu hóa quy trình đăng ký, xét duyệt, chấm điểm và
                             công nhận sáng kiến với nền tảng số hóa thông minh</p>
                         <a href="#contact" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal"
@@ -256,13 +256,13 @@
                                 <div class="text-center">
                                     <img src="assets/img/AI-don-de-nghi.png"
                                         alt="Đơn đề nghị công nhận sáng kiến trên phần mềm CUSC-IES">
-                                    <p class="img-caption">Đơn đề nghị</p>
+                                    <h6 class="img-caption">Đơn đề nghị</h6>
                                 </div>
                             </div>
                             <div class="col-md-6 col-12">
                                 <div class="text-center">
                                     <img src="assets/img/AI-don-phat-hien-trung-lap.png" alt="Đơn phát hiện trùng lặp">
-                                    <p class="img-caption">Đơn phát hiện trùng lắp</p>
+                                    <h6 class="img-caption">Đơn phát hiện trùng lắp</h6>
                                 </div>
                             </div>
                         </div>
@@ -644,10 +644,11 @@
     <!-- Footer -->
     <footer class="footer pt-5 pb-3">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-xl-5 col-md-12">
+            <div class="row g-4">                
+                <div class="col-xl-4 col-lg-8 col-md-12">
                     <div class="footer-info">
-                        <img src="assets/img/CUSC_Logo.png" alt="CUSC Logo" class="footer-logo mb-4">
+                        <img src="assets/img/CUSC_Logo.png" alt="CUSC Logo" class="footer-logo mb-4"
+                            style="height: 80px; width: 160px;">
                         <p class="mb-3" style="color: var(--gold-accent);">
                             <span class="fs-5 fw-bold">TRUNG TÂM CÔNG NGHỆ PHẦN MỀM </span>
                             <br>TRƯỜNG ĐẠI HỌC CẦN THƠ
@@ -666,9 +667,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-xl-2 col-md-4">
+                <div class="col-xl-2 col-lg-4 col-md-4">
                     <div class="footer-links ms-md-4">
-                        <h5 class="footer-title mb-4">Social</h5>
+                        <h5 class="footer-title mb-4">Kết nối</h5>
                         <div class="footer-social d-flex flex-xl-column flex-row gap-3 mb-md-4">
                             <a href="https://www.facebook.com/cuscsoftware" class="social-link">
                                 <img src="assets/img/facebook.png" alt="Facebook" class="social-icon">
@@ -682,10 +683,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-5 col-md-8">
+                <div class="col-xl-4 col-lg-7 col-md-8">
                     <div class="footer-contact">
                         <h5 class="footer-title mb-4">Liên hệ tư vấn</h5>
-                        <div class="card business-card">
+                        <div class="card business-card mt-2">
                             <div class="card-body">
                                 <div class="contact-pattern"></div>
                                 <div class="d-flex justify-content-between align-items-start">
@@ -706,9 +707,8 @@
                                         </div>
                                     </div>
                                     <div class="qr-code-container">
-                                        <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code Liên hệ"
-                                            class="rounded">
-                                        <p class="text-center mt-2">Quét để liên hệ</p>
+                                        <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code Liên hệ" class="rounded">
+                                        <!-- <p class="text-center mt-2">Quét để liên hệ</p> -->
                                     </div>
                                 </div>
                             </div>
@@ -737,9 +737,31 @@
                                     <div class="qr-code-container">
                                         <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code Liên hệ"
                                             class="rounded">
-                                        <p class="text-center mt-2">Quét để liên hệ</p>
+                                        <!-- <p class="text-center mt-2">Quét để liên hệ</p> -->
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-5 col-md-12">
+                    <div class="footer-counter">
+                        <h5 class="footer-title mb-4">Lượt truy cập</h5>
+                        <div class="counter-stats">
+                            <div class="counter-item">
+                                <i class="fas fa-users"></i>
+                                <span>Đang online:</span>
+                                <span class="counter-number">15</span>
+                            </div>
+                            <div class="counter-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Hôm nay:</span>
+                                <span class="counter-number">234</span>
+                            </div>
+                            <div class="counter-item">
+                                <i class="fas fa-signal"></i>
+                                <span>Tổng truy cập:</span>
+                                <span class="counter-number">1,234</span>
                             </div>
                         </div>
                     </div>
