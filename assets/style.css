@@ -580,7 +580,7 @@ h6 {
     padding: 1rem;
 }
 
-.modal-body img {
+.modal-body .image-ai {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
@@ -750,7 +750,7 @@ h6 {
         width: 100%;
     }
 
-    .modal-body img {
+    .modal-body .image-ai {
         max-height: none;
         margin-bottom: 0.5rem;
     }
@@ -1532,102 +1532,59 @@ h6 {
 .footer-contact .contact-item {
     display: flex;
     align-items: center;
-    /* font-size: 1.0rem; */
-    color: #5a6777;
-}
-
-.footer-contact .contact-item i {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: rgba(0, 123, 255, 0.1);
-}
-
-.footer-contact .qr-code-container {
-    padding: 0.5rem;
-    background: #fff;
-    border-radius: 8px;
-    text-align: center;
-}
-
-/* Footer Contact Card Styles - Gradient */
-.footer-contact.gradient-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border: none;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.footer-contact.gradient-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--light-orange) 100%);
-}
-
-.footer-contact.gradient-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.footer-contact .contact-name {
-    color: var(--primary-blue);
-    font-size: 1.3rem;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.footer-contact .contact-title {
-    color: var(--light-orange);
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-}
-
-.footer-contact .contact-details {
-    margin-top: 1.5rem;
-    padding-left: 0.5rem;
-    border-left: 3px solid var(--light-orange);
-}
-
-.footer-contact .contact-item {
-    display: flex;
-    align-items: center;
     margin-bottom: 0.8rem;
-    color: #444;
-    transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
 }
 
 .footer-contact .contact-item:hover {
-    color: var(--primary-blue);
+    transform: translateX(5px);
+    color: var(--light-orange);
+}
+
+.footer-contact .contact-item a {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.footer-contact .contact-item a:hover {
+    color: var(--light-orange);
+    transform: translateX(5px);
 }
 
 .footer-contact .contact-item i {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(var(--primary-blue-rgb), 0.1) 0%, rgba(var(--light-orange-rgb), 0.1) 100%);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    margin-right: 12px;
-    color: var(--primary-blue);
+    margin-right: 8px;
+    font-size: 1rem;
+    color: var(--gold-accent);
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
-.footer-contact .contact-item:hover i {
-    background: var(--primary-blue);
-    color: white;
-    transform: scale(1.1);
+.footer-contact .contact-item:hover i,
+.footer-contact .contact-item a:hover i {
+    background: var(--light-orange);
+    color: var(--primary-blue);
+    transform: scale(1.1) rotate(360deg);
+}
+
+.footer-contact .contact-item span {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease;
+}
+
+.footer-contact .contact-item a:hover span {
+    color: var(--light-orange);
 }
 
 .footer-contact .qr-code-container {
@@ -1683,25 +1640,92 @@ h6 {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* Contact Layout - 3 phần: Avatar, Info, QR Code */
+.contact-layout {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Avatar Section */
+.contact-avatar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-accent), var(--light-orange));
+    padding: 4px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.avatar-container:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.avatar-status {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    background: #4CAF50;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse-status 2s infinite;
+}
+
+@keyframes pulse-status {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* Info Section */
+.contact-info {
+    flex: 1;
+    min-width: 0;
+}
+
 .business-card .contact-name {
     color: var(--gold-accent);
     font-size: 1.4rem;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
 }
 
 .business-card .contact-title {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1rem;
     font-weight: 500;
-    /* letter-spacing: 0.5px;
-    text-transform: uppercase; */
     opacity: 0.9;
+    margin-bottom: 1rem;
 }
 
 .business-card .contact-details {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding-left: 1rem;
     border-left: 3px solid var(--light-orange);
 }
@@ -1719,6 +1743,20 @@ h6 {
     color: var(--light-orange);
 }
 
+.business-card .contact-item a {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.business-card .contact-item a:hover {
+    color: var(--light-orange);
+    transform: translateX(5px);
+}
+
 .business-card .contact-item i {
     width: 35px;
     height: 35px;
@@ -1731,15 +1769,28 @@ h6 {
     font-size: 1rem;
     color: var(--gold-accent);
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
-.business-card .contact-item:hover i {
+.business-card .contact-item:hover i,
+.business-card .contact-item a:hover i {
     background: var(--light-orange);
     color: var(--primary-blue);
     transform: scale(1.1) rotate(360deg);
 }
 
-.business-card .qr-code-container {
+.business-card .contact-item span {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease;
+}
+
+.business-card .contact-item a:hover span {
+    color: var(--light-orange);
+}
+
+/* QR Code Section */
+.qr-code-container {
+    flex-shrink: 0;
     background: rgba(255, 255, 255, 0.95);
     padding: 10px;
     border-radius: 12px;
@@ -1749,93 +1800,10 @@ h6 {
     z-index: 1;
 }
 
-.footer .business-card .contact-name {
-    font-size: 1.1rem;
-}
-
-.footer .business-card .contact-title {
-    font-size: 0.9rem;
-}
-
-.footer .business-card .contact-details{
-    font-size: 0.9rem;
-}
-
-/* Tablet styles */
-@media (min-width: 577px) and (max-width: 991px) {
-    .business-card .contact-name {
-        font-size: 1.2rem;
-    }
-    
-    .business-card .contact-title {
-        font-size: 0.9rem;
-    }
-    
-    .business-card .contact-details {
-        margin-top: 1rem;
-    }
-    
-    .business-card .contact-item {
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-    }
-}
-
-/* Mobile styles */
-@media (max-width: 576px) {
-    .business-card .d-flex {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .business-card .contact-info {
-        margin-bottom: 20px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .business-card .contact-details {
-        border-left: none;
-        border-top: 3px solid var(--light-orange);
-        padding-left: 0;
-        padding-top: 1rem;
-    }
-
-    .business-card .contact-item {
-        justify-content: center;
-    }
-
-    .business-card .qr-code-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .business-card .qr-code-container img {
-        margin: 0 auto;
-    }
-}
-
 .business-card .qr-code-container img {
     width: 100px;
     height: 100px;
     object-fit: cover;
-}
-
-@media (min-width: 576px) {
-    .business-card .qr-code-container img {
-        width: 120px;
-        height: 120px;
-    }
-}
-
-@media (min-width: 992px) {
-    .business-card .qr-code-container img {
-        width: 140px;
-        height: 140px;
-    }
 }
 
 .business-card .qr-code-container:hover {
@@ -1848,6 +1816,210 @@ h6 {
     font-weight: 500;
     font-size: 0.9rem;
     margin: 0;
+}
+
+/* Responsive Design */
+
+/* Desktop (992px and up) */
+@media (min-width: 992px) {
+    .contact-layout {
+        gap: 2rem;
+    }
+    
+    .avatar-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .avatar-status {
+        width: 28px;
+        height: 28px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .business-card .contact-name {
+        font-size: 1.5rem;
+    }
+    
+    .business-card .contact-title {
+        font-size: 1.1rem;
+    }
+    
+    .business-card .qr-code-container img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-layout {
+        gap: 1.5rem;
+    }
+    
+    .avatar-container {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .avatar-status {
+        width: 26px;
+        height: 26px;
+        bottom: 8px;
+        right: 8px;
+    }
+    
+    .business-card .contact-name {
+        font-size: 1.3rem;
+    }
+    
+    .business-card .contact-title {
+        font-size: 0.95rem;
+    }
+    
+    .business-card .contact-details {
+        margin-top: 0.8rem;
+    }
+    
+    .business-card .contact-item {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .business-card .qr-code-container img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    .contact-layout {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+    }
+    
+    .contact-avatar {
+        order: 1;
+    }
+    
+    .contact-info {
+        order: 2;
+        width: 100%;
+    }
+    
+    .qr-code-container {
+        order: 3;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    .avatar-container {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .avatar-status {
+        width: 24px;
+        height: 24px;
+        bottom: 6px;
+        right: 6px;
+    }
+    
+    .business-card .contact-name {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .business-card .contact-title {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .business-card .contact-details {
+        border-left: none;
+        border-top: 3px solid var(--light-orange);
+        padding-left: 0;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .business-card .contact-item {
+        justify-content: center;
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .business-card .contact-item a {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .business-card .contact-item i {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .business-card .qr-code-container img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .business-card .qr-code-container p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+    .contact-layout {
+        gap: 0.8rem;
+    }
+    
+    .avatar-container {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .avatar-status {
+        width: 20px;
+        height: 20px;
+        bottom: 4px;
+        right: 4px;
+    }
+    
+    .business-card .contact-name {
+        font-size: 1.1rem;
+    }
+    
+    .business-card .contact-title {
+        font-size: 0.85rem;
+    }
+    
+    .business-card .contact-item {
+        font-size: 0.8rem;
+    }
+    
+    .business-card .contact-item i {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .business-card .qr-code-container img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .business-card .qr-code-container p {
+        font-size: 0.75rem;
+    }
 }
 
 /* Footer Counter Styles */
@@ -1887,13 +2059,17 @@ h6 {
     margin-left: auto;
 }
 
-@media (min-width: 1200px) {
-    .footer .business-card .qr-code-container {
-        padding: 4px;
+/* Contact Modal Responsive */
+@media (max-width: 991px) {
+    #contactModal .modal-dialog {
+        max-width: 95%;
+        margin: 1rem auto;
     }
+}
 
-    .footer .business-card .qr-code-container img {
-        width: 80px;
-        height: auto;
+@media (max-width: 767px) {
+    #contactModal .modal-dialog {
+        max-width: 98%;
+        margin: 0.5rem auto;
     }
 } 
