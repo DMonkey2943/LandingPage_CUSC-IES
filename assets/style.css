@@ -456,6 +456,16 @@ h6 {
     color: var(--light-orange);
     margin-top: 0.25rem;
 }
+  
+.footer-contact-item a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+    color: var(--light-orange);
+}
 
 .footer-links-list {
     list-style: none;
@@ -760,12 +770,12 @@ h6 {
         /* Ensure full-width image on mobile */
     }
 
-    .footer-info {
+    /* .footer-info {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
+    } */
 
 }
 
@@ -816,6 +826,13 @@ h6 {
 
     .carousel-caption h1 {
         font-size: 2rem;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
